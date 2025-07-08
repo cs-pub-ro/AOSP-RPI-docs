@@ -1,6 +1,6 @@
 # Lab 01. Intro to AOSP. Building & testing Android on Raspberry Pi 5.
 
-## 1.2. Building AOSP from source.
+## 1.3. Building AOSP from source.
 
 ### The `repo` tool
 
@@ -86,13 +86,15 @@ Enough talk! Enter your `/build` mount namespace if not already in (using the
 `builder-enter.sh` script) and do the following:
 
 ```sh
+cd /build
+ls -l  # you should see AOSP's entire structure
 # in sh, `.` is an alias for `source`
 # note: you need to do this in every terminal you wish to build AOSP in!
 source build/envsetup.sh
 # choose a configuration to prepare some environment variables
 # you also need to repeat-run this exact command in every terminal, as well,
 # since it only manipulates environment variables in your current shell!
-lunch aosp_rpi4-bp2a-userdebug
+lunch aosp_rpi5-bp2a-userdebug
 # let's [re]compile everything
 make bootimage systemimage vendorimage -j4
 # should hopefully/only take 1-5 mins, since the bulk of it was already buit!
