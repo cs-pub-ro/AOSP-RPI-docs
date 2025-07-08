@@ -16,5 +16,5 @@ here](github.com/cs-pub-ro/AOSP-RPI-builder) if you wish to host your own.
 Finally, kudos to the [Raspberry Vanilla](https://github.com/raspberry-vanilla/)
 project, the AOSP distribution we based our tasks on.
 
-You can then get started with the lab series!
+[Click here to get started!](./labs/)
 
