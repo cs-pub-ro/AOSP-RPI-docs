@@ -7,4 +7,5 @@ Lab lessons / tasks, in order:
 - [1.3. Building AOSP from source](./03-build-android.md)
 - [1.4. Customizing AOSP](./04-customize-aosp.md)
 - [1.5. Going Live on Raspberry!](./05-live-raspberry.md)
+- [1.6. Debugging Android](./06-android-debugging.md)
 
