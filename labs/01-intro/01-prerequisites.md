@@ -3,8 +3,9 @@
 ## 1.1. Prerequisites. Connecting to the cloud server.
 
 Since building AOSP requires many CPU cores, 64GB RAM & 300GB of free space
-(yep, for real!), we will be using some rather powerful VMs hosted inside the
-Faculty’s private cloud (OpenStack).
+([yep, for real!](https://source.android.com/docs/setup/start/requirements)), we
+will be using some rather powerful VMs hosted inside the Faculty’s private cloud
+(OpenStack).
 
 It’s going to be a headless (no graphics) server-like environment, so Linux
 command line knowledge is required. Don’t worry, you have all the tools you need
@@ -36,7 +37,7 @@ with a preferred username to be created) to gain access to the build machine and
 wait for confirmation...
 
 <details>
-  <summary>For lab supervisors:</summary>
+  <summary><i>[For lab supervisors]</i></summary>
   
   Supervisors will allocate the user a shared VM using a shared spreadsheet, 
   then configure a new user:
