@@ -9,7 +9,7 @@ partition with some Broadcom firmware files, the Linux kernel and device tree,
 then any other partitions (as we'll see later, Android has several!).
 
 Raspberry-Vanilla project gives us a script to build a ready-to-burn SD card
-image (you have a `rpi5-mkimg.sh` symlink inside `/boot` if you observe
+image (you have a `rpi5-mkimg.sh` symlink inside `/build` if you observe
 carefully!).
 
 By default, this script creates a 16GB file, which is a bit too much to always
