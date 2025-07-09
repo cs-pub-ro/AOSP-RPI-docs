@@ -1,4 +1,4 @@
-# Lab 01. Intro to AOSP. Building & testing Android on Raspberry Pi 5.
+# Lab 01. Intro to AOSP. Building & testing on RPI5
 
 ## 1.6. Debugging Android
 

@@ -1,4 +1,4 @@
-# Lab 01. Intro to AOSP. Building & testing Android on Raspberry Pi 5.
+# Lab 01. Intro to AOSP. Building & testing on RPI5
 
 ## 1.1. Prerequisites. Connecting to the cloud server.
 
