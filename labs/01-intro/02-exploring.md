@@ -92,3 +92,18 @@ time to learn some tricks!
 
 If you still wish to use VSCode,
 [make sure to configure it for SSH remote setup](https://code.visualstudio.com/docs/remote/ssh)!
+
+
+<details>
+  <summary>It won't actually work due to the need to run `sudo builder-enter.sh` to
+actually see your `/build` overlay, there are some workarounds...</summary>
+  
+See https://github.com/microsoft/vscode/issues/48659#issuecomment-570815118 .
+You would need to patch the `.js` extension and add something like this to your
+ssh config:
+
+```conf
+    RemoteCommand sudo builder-enter.sh bash
+```
+
+</details>
