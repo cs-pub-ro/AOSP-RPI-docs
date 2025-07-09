@@ -100,6 +100,11 @@ make bootimage systemimage vendorimage -j4
 # should hopefully/only take 1-5 mins, since the bulk of it was already buit!
 ```
 
+⚠️⚠️⚠️ **DO NOT _EVER_ USE SUDO WHEN ISSUING BUILD COMMANDS ON THE VM!** ⚠️⚠️⚠️
+\
+(_build process will restart from scratch & invalidate cache => disk will get
+full and you will be flogged_)
+
 All compilation artifacts will be present inside the `out/` directory (do a
 listing there and see what you can find!).
 
