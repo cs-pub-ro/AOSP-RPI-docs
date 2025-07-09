@@ -12,7 +12,11 @@ Raspberry-Vanilla project gives us a script to build a ready-to-burn SD card
 image (you have a `rpi5-mkimg.sh` symlink inside `/boot` if you observe
 carefully!).
 
-Invoke it and let's continue.
+By default, this script creates a 16GB file, which is a bit too much to always
+download from the build server over WiFi and burn onto a slow SD card. So edit
+it and set `IMGSIZE=8697308000` (~8GB). Much better!
+
+Invoke `rpi5-mkimg.sh` and let's go on with our next challenge.
 
 ### Downloading the image
 
