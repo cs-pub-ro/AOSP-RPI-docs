@@ -20,6 +20,8 @@ for this.
 
 Build your first view with a welcoming message and some buttons.
 
+Here's [some material-themed components](https://composables.com/material/button) to choose from ;)  
+
 If you wish, please make them log different on-click debug messages with LogCat
 (make sure to test it!).
 
