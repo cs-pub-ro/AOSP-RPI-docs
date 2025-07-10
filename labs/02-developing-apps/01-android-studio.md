@@ -27,6 +27,8 @@ Click on `File -> New Project`. Choose `Empty Activity` if you wish to make a
 Jetpack Compose Pro or, if you wish to do it the old way:
 `Empty Views Activity`.
 
-![Android Studio](./images/01-new-project.png)
+![New Project](./images/01-new-project.png)
 
-Fire up your IDE and let's proceed to run it on our RPIs!
+Let's call it `Summer App` (or just whatever you wish).
+
+**Now fire up your IDE and let's proceed to run it on our RPIs!**
