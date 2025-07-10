@@ -19,8 +19,8 @@ The Raspberry Pi device should be visible:
 
 ### Run the Demo App
 
-Create a new empty project if you haven't already (`Summer App`, as hinted by
-previous section).
+Create a new empty project if you haven't already (`Summer App` and
+`com.aospi.summer` package name, as hinted by previous section).
 
 Let's run it (click on the "Run" icon at the top of the screen):
 
@@ -35,3 +35,35 @@ You can also rotate the display (which affects both the physical screen and its
 mirror):
 
 ![Rotate Display](./images/02-rpi5-rotate.png)
+
+### Inspecting/managing the applications using ADB
+
+Open the Terminal from Android Studio and type:
+
+```sh
+adb shell ps -A
+```
+
+![ADB shell ps](./images/02-adb-shell.png)
+
+Find the PID of the current application. Since this tutorial named the
+application `SummerApp`, grep for the corresponding name in the list of
+processes:
+
+![ADB shell ps grep](./images/02-adb-ps.png)
+
+But since we have root, where is this app stored? Enter a `adb shell` to find
+out:
+
+```sh
+# inside `adb shell`:
+# use the package manager
+pm list
+# to grep for our app:
+pm list packages -f | grep summer
+# ahaaa! it's inside a temporary /data/app/~~<tmp name> dir
+ls -l /data/app/
+# => meet SELinux Mandatory Access Control, even if you are root :/
+```
+
+Next, we'll develop some app with an UI and multiple screens (_ahem_, 2).

@@ -29,6 +29,7 @@ Jetpack Compose Pro or, if you wish to do it the old way:
 
 ![New Project](./images/01-new-project.png)
 
-Let's call it `Summer App` (or just whatever you wish).
+Let's call it `Summer App` (or just whatever you wish) and give it a package
+path e.g., `com.aospi.summer`.
 
 **Now fire up your IDE and let's proceed to run it on our RPIs!**
