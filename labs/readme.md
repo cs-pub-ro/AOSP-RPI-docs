@@ -2,6 +2,7 @@
 
 Here's the documentation for the hands-on lab sessions, in order:
 
- - [Lab 01. Intro to AOSP. Building & testing Android on Raspberry Pi 5](./01-intro)
+ - [Lab 01. Intro to AOSP. Building & testing on RPI5](./01-intro)
+ - [Lab 02. Android App Development](./02-developing-apps)
  - rest are WIP!
 
