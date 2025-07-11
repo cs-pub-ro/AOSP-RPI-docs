@@ -1,0 +1,21 @@
+package {
+    default_applicable_licenses: ["hardware_interfaces_license"],
+}
+
+aidl_interface {
+    name: "android.hardware.gpio",
+    vendor_available: true,
+    srcs: ["android/hardware/gpio/*.aidl"],
+    stability: "vintf",
+    owner: "AOSPi",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+    },
+    frozen: false,
+}
+
