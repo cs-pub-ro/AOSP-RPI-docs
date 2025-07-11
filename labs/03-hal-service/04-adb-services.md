@@ -14,7 +14,7 @@ service list | grep gpio
 #23      android.hardware.gpio.IGpio/default: [android.hardware.gpio.IGpio]
 
 # also check the logs:
-logcat -e gpio
+logcat -e Gpio
 ```
 
 We can now use the
@@ -43,7 +43,7 @@ We have two arguments, thus:
 ```sh
 service call android.hardware.gpio.IGpio/default 1 i32 1 i32 1
 # now check the logs and see if setGpio function was called in our implementation:
-logcat -e gpio
+logcat -e Gpio
 ```
 
 Also test the second function (only 1 parameter!). Don't worry about the return
