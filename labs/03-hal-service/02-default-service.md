@@ -98,7 +98,8 @@ Finally, we need to include from our device makefile: edit
 near other `PRODUCT_PACKAGES` variable assignments:
 
 ```mk
-PRODUCT_PACKAGES += com.android.hardware.gpio
+# add our new GPIO service
+PRODUCT_PACKAGES += android.hardware.gpio-service
 ```
 
 Let's re-build the Android image (but no testing yet!) just to see if you have
