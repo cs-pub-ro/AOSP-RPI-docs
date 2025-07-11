@@ -8,11 +8,7 @@ namespace aidl::android::hardware::gpio {
 ::ndk::ScopedAStatus Gpio::setGpio(int32_t in_portn, int32_t in_state)
 {
 	(void)(in_portn);
-  // ::gpiod::chip chip("gpiochip0");
-  //
-  // auto line = chip.get_line(port);
-  // line.request({"android.gpio", gpiod::line_request::DIRECTION_OUTPUT, 0}, value);  
-
+	(void)(in_state);
   return ::ndk::ScopedAStatus::ok();
 }
 
