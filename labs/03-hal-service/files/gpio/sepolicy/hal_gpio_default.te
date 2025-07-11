@@ -1,0 +1,10 @@
+# hal_gpio_default service
+type hal_gpio_default, domain;
+type hal_gpio_default_exec, exec_type, file_type, vendor_file_type;
+type gpio_device, dev_type;
+
+allow hal_gpio_default device:dir r_dir_perms;
+allow hal_gpio_default device:file rw_file_perms;
+
+init_daemon_domain(hal_gpio_default)
+

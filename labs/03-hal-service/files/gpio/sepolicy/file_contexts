@@ -1,0 +1,4 @@
+# GPIO file policies
+/vendor/bin/hw/android\.hardware\.gpio-service			u:object_r:hal_gpio_default_exec:s0
+/dev/gpiochip(.*) 										u:object_r:gpio_device:s0
+
