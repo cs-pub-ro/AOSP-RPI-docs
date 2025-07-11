@@ -85,3 +85,17 @@ for Linux I recommend `picocom`).
 After several minutes (Android runs some heavy first-time initialization
 routine), the display should turn on with Android's logo! Wait some more minutes
 for it to fully boot.
+
+### Missing config.txt tweaks workaround
+
+Sometimes, `raspberry-vanilla`'s vendor makefile doesn't properly rebuild the
+boot partition (especially `config.txt`). So even if you edit it in
+`device/brcm/rpi5/boot/config.txt`, it won't get updated into the final image.
+
+As easy workaround, simply delete this output directory:
+
+```sh
+rm -rf out/target/product/rpi5/rpiboot
+```
+
+Re-build and the boot partition should be updated!
