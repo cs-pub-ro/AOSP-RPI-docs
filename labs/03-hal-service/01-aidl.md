@@ -37,6 +37,9 @@ for this purpose, providing features such as security identification of the
 caller process, message packing/unpacking, thread management, efficient passing
 via shared memory between local processes and many other communication goodness.
 
+Finally, Binder + AIDL allows us to avoid using JNI (Java Native Interface) to
+interface between Java/Kotlin code and native (C/C++) libraries (thanks God!).
+
 ### Hardware interfaces
 
 Android's HAL interfaces and implementations use a well-defined file structure.
@@ -117,6 +120,8 @@ directory (or use a different terminal / tmux) back to `/build`, then:
 ```sh
 # note: m is alias for make; we have many more created by build/envsetup.sh
 m android.hardware.gpio-update-api
+# must also freeze our API (to be able to use it as Vendor Interface)
+m android.hardware.gpio-freeze-api
 # afterwards, let's build our module with `mmm` (yep, it's triple!):
 mmm hardware/interfaces/gpio
 ```

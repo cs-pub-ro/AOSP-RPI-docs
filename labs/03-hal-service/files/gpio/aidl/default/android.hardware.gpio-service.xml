@@ -1,0 +1,8 @@
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.gpio</name>
+        <version>1</version>
+        <fqname>IGpio/default</fqname>
+    </hal>
+</manifest>
+

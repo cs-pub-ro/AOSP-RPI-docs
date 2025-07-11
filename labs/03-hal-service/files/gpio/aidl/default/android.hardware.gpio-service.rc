@@ -1,0 +1,6 @@
+service android.hardware.gpio-service /vendor/bin/hw/android.hardware.gpio-service
+        interface aidl android.hardware.gpio.IGpio/default
+        class hal
+        user system
+        group system
+
