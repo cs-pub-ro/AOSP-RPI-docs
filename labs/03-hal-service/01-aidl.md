@@ -109,7 +109,7 @@ _output_ voltage level for a GPIO, and a `getGpio` method to query the voltage
 of an _input_ GPIO
 
 We will also need to create a Soong Blueprint file containing build instructions
-for our new AIDL... [fetch it from here](./files/gpio/Android.bp) (+ note the
+for our new AIDL... [fetch it from here](./files/gpio/aidl/Android.bp) (+ note the
 relative paths in GitHub, they mirror the ones inside AOSP's
 `hardware/interfaces`)!
 
