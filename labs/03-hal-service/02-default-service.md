@@ -93,6 +93,14 @@ the service and will be included by the vendor device (the _brcm/rpi5_ model).
 Note that we declare the shared libraries we link to, notably, our
 `android.hardware.gpio-V1-ndk` that was generated from the AIDL file!
 
+Finally, we need to include from our device makefile: edit
+`device/brcm/rpi5/device.mk` and add somewhere
+near other `PRODUCT_PACKAGES` variable assignments:
+
+```mk
+PRODUCT_PACKAGES += com.android.hardware.gpio
+```
+
 Let's re-build the Android image (but no testing yet!) just to see if you have
 any errors:
 
