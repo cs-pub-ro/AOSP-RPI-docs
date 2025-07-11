@@ -55,6 +55,9 @@ which sends us to
 [logging.h](https://cs.android.com/android/platform/superproject/+/master:system/libbase/include/android-base/logging.h)
 implementing a usable C++ stream class. Use the `INFO` log level.
 
+We'll implement the full kernel GPIO driver interaction code later (the next
+day).
+
 ### The service's main entrypoint
 
 A service is an executable. Check out
@@ -89,3 +92,10 @@ the service and will be included by the vendor device (the _brcm/rpi5_ model).
 
 Note that we declare the shared libraries we link to, notably, our
 `android.hardware.gpio-V1-ndk` that was generated from the AIDL file!
+
+Let's re-build the Android image (but no testing yet!) just to see if you have
+any errors:
+
+```sh
+make bootimage systemimage vendorimage -j4
+```
