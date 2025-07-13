@@ -11,8 +11,29 @@ for calling AIDL services, and here's a random example of using a custom HAL
 service:
 https://github.com/alvenan/AOSPbenchmark/blob/main/timer_manager/src/vendor/alvenan/timermanager/TimerManager.java
 
-Note that you will need to
-[import the AIDL file in your Android Studio](https://stackoverflow.com/questions/17836234/how-can-i-add-the-aidl-file-to-android-studio-from-the-in-app-billing-example)
-project for it to generate your IGpio stubs.
+The problem is: you cannot use `android.os.ServiceManager` without having system
+app privileges..
+
+There are solutions to abstract away the service calls by creating another
+service for a new Android framework API, but it would require
+[exporting the AOSP as a new Android SDK](https://kwagjj.wordpress.com/2017/10/27/building-custom-android-sdk-from-aosp-and-adding-it-to-android-studio/),
+but it requires lots of extra work.
+
+An easier workaround is to build this app in-tree on AOSP's build directory by
+copying your app to new `packages/apps` inside the Android source directory.
+
+You will then need to write a new `Android.bp` Soong blueprint to give it
+instructions on how to build your app. Check
+[the apps/ClassicSummerApp directory](../../apps/ClassicSummerApp) for an
+example.
+
+After building the entire android
+(`make ... <with everything just to be sure>`), you may find the APK file inside
+`out/target/product/rpi5/system/product/app/ClassicSummerApp/ClassicSummerApp.apk`
+(i.e., a path on the generated System partition -- that's also where installed
+Android app files reside!).
+
+Download the `.apk` using `scp` and install it using
+`adb install <path-to-apk-file>`.
 
 GL HF!
