@@ -27,8 +27,18 @@ instructions on how to build your app. Check
 [the apps/ClassicSummerApp directory](../../apps/ClassicSummerApp) for an
 example.
 
+Note that your `manifest.xml` should contain the `package` attribute, so make
+sure yo modify it as well:
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.aospi.summer.classic" >
+    ...
+```
+
 Finally, make sure to include your application inside
-`device/brcm/rpi5/device/mk` (by app directory name), e.g.:
+`device/brcm/rpi5/device.mk` (by app directory name), e.g.:
 
 ```mk
 PRODUCT_PACKAGES += ClassicSummerApp
