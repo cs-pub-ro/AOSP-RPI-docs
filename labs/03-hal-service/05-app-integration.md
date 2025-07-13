@@ -27,6 +27,13 @@ instructions on how to build your app. Check
 [the apps/ClassicSummerApp directory](../../apps/ClassicSummerApp) for an
 example.
 
+Finally, make sure to include your application inside
+`device/brcm/rpi5/device/mk` (by app directory name), e.g.:
+
+```mk
+PRODUCT_PACKAGES += ClassicSummerApp
+```
+
 After building the entire android
 (`make ... <with everything just to be sure>`), you may find the APK file inside
 `out/target/product/rpi5/system/product/app/ClassicSummerApp/ClassicSummerApp.apk`
