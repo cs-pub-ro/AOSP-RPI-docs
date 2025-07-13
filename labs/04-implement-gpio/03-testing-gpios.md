@@ -26,6 +26,11 @@ adb shell chmod 777 /dev/gpiochip0
 ```
 
 Of course, the proper solution would be to customize gpiochip device permissions
-by editing AOSP `init.rc` service and rebuilding the system partition...
+by editing AOSP `init.rc` service and rebuilding the system partition:
+
+```sh
+vim system/core/rootdir/init.rc
+# add `chmod 777 /dev/gpiochip0` somewhere in the "on boot" section
+```
 
 Try again! If your implementation is correct, it should work!
