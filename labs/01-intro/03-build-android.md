@@ -18,8 +18,8 @@ To help developers manage this, the
 command-line multi-git-project management utility able to efficiently download /
 upload changes from a huge list repositories.
 
-Let's take a quick peek to Android's downloading process (**do not run them** as
-they were already completed!):
+Let's take a quick peek to Android's downloading process (**do not run this**, as
+it was already completed on the VMs!):
 
 ```sh
 repo init --partial-clone --no-use-superproject -b android-latest-release -u
@@ -94,7 +94,7 @@ source build/envsetup.sh
 # choose a configuration to prepare some environment variables
 # you also need to repeat-run this exact command in every terminal, as well,
 # since it only manipulates environment variables in your current shell!
-lunch aosp_rpi5-bp2a-userdebug
+lunch aosp_rpi5-cp2a-userdebug
 # let's [re]compile everything
 make bootimage systemimage vendorimage -j4
 # should hopefully/only take 1-5 mins, since the bulk of it was already buit!

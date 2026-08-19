@@ -103,6 +103,8 @@ You would need to patch the `.js` extension and add something like this to your
 ssh config:
 
 ```conf
+Host <server-hostname>
+    # add this:
     RemoteCommand sudo builder-enter.sh bash
 ```
 

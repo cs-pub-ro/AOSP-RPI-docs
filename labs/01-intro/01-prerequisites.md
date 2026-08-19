@@ -43,8 +43,8 @@ wait for confirmation...
   then configure a new user:
   ```sh
   # first, SSH into the target machine (where $IDX is the VM's index)
-  ssh admin@aosp2025.root.sx -p $(( 2200 + IDX ))
-  # e.g., ssh aosp2025.root.sx -p 2201
+  ssh admin@arm2026.root.sx -p $(( 2200 + IDX ))
+  # e.g., ssh arm2026.root.sx -p 2201
   ````
   Then, after connecting to the VM:
   ```sh
@@ -57,5 +57,5 @@ wait for confirmation...
 Finally, try to connect to your assigned VM and port, e.g.:
 
 ```sh
-ssh your-user@aosp2025.root.sx -p 2210
+ssh your-user@arm2026.root.sx -p 2209
 ```
