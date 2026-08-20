@@ -104,7 +104,8 @@ ssh config:
 
 ```conf
 Host <server-hostname>
-    # add this:
+    # add this (required!):
+    RequestTTY yes
     RemoteCommand sudo builder-enter.sh bash
 ```
 
