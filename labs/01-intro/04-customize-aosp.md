@@ -77,3 +77,17 @@ Try `device/brcm/rpi5/aosp_rpi5.mk` ;)
 
 Invoke `make` again with the appropriate arguments and let's finally proceed
 with bringing Android to our devices!
+
+### Missing config.txt tweaks workaround
+
+Sometimes, `raspberry-vanilla`'s vendor makefile doesn't properly rebuild the
+boot partition (especially `config.txt`). So even if you edit it in
+`device/brcm/rpi5/boot/config.txt`, it won't get updated into the final image.
+
+As easy workaround, simply delete this output directory:
+
+```sh
+rm -rf out/target/product/rpi5/rpiboot
+```
+
+Re-build and the boot partition should be updated!
