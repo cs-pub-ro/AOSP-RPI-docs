@@ -96,6 +96,8 @@ source build/envsetup.sh
 # since it only manipulates environment variables in your current shell!
 lunch aosp_rpi5-cp2a-userdebug
 # let's [re]compile everything
+# limit Ninja's parallelism to 4
+export NINJAJOBS=4
 make bootimage systemimage vendorimage -j4
 # should hopefully/only take 1-5 mins, since the bulk of it was already buit!
 ```
