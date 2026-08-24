@@ -27,7 +27,7 @@ Let's write some code to actually use this library.
 
 Since gpiod's [official documentation](https://libgpiod.readthedocs.io/) is
 pretty bad, you can
-[inspire from tutorials](https://www.ics.com/blog/gpio-programming-exploring-libgpiod-library).
+[inspire from tutorials](https://fiosproject.de/posts/libgpiod/).
 
 Basically:
 
