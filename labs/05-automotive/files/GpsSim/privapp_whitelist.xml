@@ -1,0 +1,5 @@
+<permissions>
+    <privapp-permission package="com.aospi.gpsim">
+        <permission name="android.permission.MOCK_LOCATION"/>
+    </privapp-permission>
+</permissions>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="AOSpi Summer School" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>SummerDrive loop around the Cluj campus</name>
+    <desc>Piața Universității -> Bd. Unirii -> Piața Sfatului -> Bd. Republicii -> back. ~1.2 km loop.</desc>
+  </metadata>
+  <trk>
+    <name>campus-loop</name>
+    <trkseg>
+      <trkpt lat="46.7305" lon="21.1630"><ele>365</ele></trkpt>
+      <trkpt lat="46.7340" lon="21.1590"><ele>366</ele></trkpt>
+      <trkpt lat="46.7385" lon="21.1575"><ele>367</ele></trkpt>
+      <trkpt lat="46.7412" lon="21.1555"><ele>368</ele></trkpt>
+      <trkpt lat="46.7430" lon="21.1505"><ele>366</ele></trkpt>
+      <trkpt lat="46.7420" lon="21.1445"><ele>364</ele></trkpt>
+      <trkpt lat="46.7380" lon="21.1420"><ele>363</ele></trkpt>
+      <trkpt lat="46.7340" lon="21.1445"><ele>364</ele></trkpt>
+      <trkpt lat="46.7300" lon="21.1500"><ele>365</ele></trkpt>
+      <trkpt lat="46.7295" lon="21.1580"><ele>365</ele></trkpt>
+      <trkpt lat="46.7305" lon="21.1630"><ele>365</ele></trkpt>
+    </trkseg>
+  </trk>
+</gpx>

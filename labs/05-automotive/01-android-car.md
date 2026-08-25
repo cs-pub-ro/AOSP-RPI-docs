@@ -71,4 +71,5 @@ adb shell pm install /sdcard/OsmAnd.apk
 ```
 
 Launch it, download a map tile region for Romania / Cluj, and note that there is no
-location yet — there is no GPS hardware on the RPi5. That changes in step 03.
+location yet - there is no GPS hardware on the RPi5 (which we'll see about in 
+the next task).

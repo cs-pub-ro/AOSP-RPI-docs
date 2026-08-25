@@ -1,0 +1,23 @@
+android_app {
+    name: "GpsSim",
+    srcs: ["java/**/*.kt"],
+    static_libs: [
+        "androidx.core_core-ktx",
+        "androidx.appcompat_appcompat",
+    ],
+    resource_dirs: ["res"],
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    // ships the MOCK_LOCATION allowlist into /system/etc/permissions/
+    required: ["gpsim_privapp_whitelist"],
+    min_sdk_version: "26",
+    target_sdk_version: "current",
+}
+
+prebuilt_etc {
+    name: "gpsim_privapp_whitelist",
+    src: "privapp_whitelist.xml",
+    sub_dir: "permissions",
+    filename: "com.aospi.gpsim.xml",
+}
