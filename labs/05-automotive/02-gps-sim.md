@@ -1,23 +1,22 @@
 # Lab 05. Android Automotive & Location Services
 
-## 5.3. GpsSim - GPS Location Simulator
+## 5.2. GpsSim - GPS Location Simulator
 
-RPi5 has no GPS. But Android's `LocationManager` supports **test
-providers**: a privileged app can invent a GPS provider and feed it any
-fixes. That's how the emulator's "geo fix" works under the hood — you're
-now building the on-device version.
+RPi5 has no GPS. But Android's `LocationManager` supports **test providers**: a 
+privileged app can invent a GPS provider and feed it any fixes.
 
 ### How it works
 
-Check out the skeleton source code at [./files/GpsSim/](./files/GpsSim/java/
+Check out the skeleton source code at [./files/GpsSim/](./files/GpsSim/).
 
-Here are the basic test provider API methods we use:
+Hee are the basic test provider API methods we use:
 
 ```kotlin
 val lm = context.getSystemService(LocationManager::class.java)
+// ...
 lm.addTestProvider(LocationManager.GPS_PROVIDER, ...)
 lm.setTestProviderEnabled(LocationManager.GPS_PROVIDER, true)
-// then, for each simulated event, emit a location fix:
+// ... then, for each simulated event, emit a location fix:
 lm.setTestProviderLocation(LocationManager.GPS_PROVIDER, location)
 ```
 
@@ -28,21 +27,23 @@ lm.setTestProviderLocation(LocationManager.GPS_PROVIDER, location)
   resource file) and push the location object using `setTestProviderLocation` 
   with the correct `speed`, `bearing` and `elapsedRealtimeNanos`.
 
-Fill out the `TODO`s and build the app (`m GpsSim` should report success)!
+Now copy the sample source to AOSP tree, fill out the `TODO`s and build the app
+(`m GpsSim` should report success)!
 
 ### Build concerns
 
 Note that `GpsSim` must be built as a **platform app**: in-tree, under
-`packages/apps/GpsSim`, signed with the platform key (automatically when building 
-the image).
+`packages/apps/GpsSim`, signed with the platform key (done automatically when 
+building the image). Also, do not forget to add it to `PRODUCT_PACKAGES` inside
+your `device.mk` (like in [Lab 03](../03-hal-service/05-app-integration.md)).
 
 The `MOCK_LOCATION` allowlist is shipped with the image by the
 `prebuilt_etc` module in `Android.bp` (`privapp_whitelist.xml` →
 `/system/etc/permissions/com.aospi.gpsim.xml`) — nothing extra to do.
 
-Rebuild + flash the car image (actually, just the vendor partition would suffice). 
+Rebuild + flash the newly obtained car image.
 
-Alternative way to upload just the modified APK as privileged app using `adb`:
+Here's an alternative way to upload just the modified APK as privileged app using `adb`:
 
 ```sh
 # find & obtain the apk on the build server, usually at:
